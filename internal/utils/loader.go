@@ -35,7 +35,7 @@ func LoadProductsFromDynamo(minPrice, maxPrice float64, inStock bool, colour str
 	}
 
 	out, err := client.Scan(context.TODO(), &dynamodb.ScanInput{
-		TableName:                 aws.String("Products"),
+		TableName:                 aws.String("ProductsTable"),
 		FilterExpression:          aws.String(filterExpr),
 		ExpressionAttributeValues: exprAttrVals,
 	})
@@ -64,7 +64,7 @@ func LoadSingleProductFromDynamo(id int) (*models.Product, error) {
 	client := dynamodb.NewFromConfig(cfg)
 
 	out, err := client.GetItem(context.TODO(), &dynamodb.GetItemInput{
-		TableName: aws.String("Products"),
+		TableName: aws.String("ProductsTable"),
 		Key: map[string]types.AttributeValue{
 			"id": &types.AttributeValueMemberN{Value: fmt.Sprintf("%d", id)},
 		},
