@@ -1,0 +1,930 @@
+[
+    {
+        "sku": "ABC123",
+        "id": 1,
+        "name": "Lorem Ipsum - ABC123",
+        "path": "",
+        "description": "<h5 align=\"center\"> Lorem Ipsum - ABC123 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+        "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "prices": {
+            "price": 119.99,
+            "membershipPrice": 99.99,
+            "currencyCode": "GBP"
+        },
+        "images": [
+            "https://fastly.picsum.photos/id/909/200/300.jpg?hmac=jfLbR2FxyVpJjZ0VrwZWiPNfvXlOEQxNdoCE2uu4qlM",
+            "https://fastly.picsum.photos/id/786/200/300.jpg?hmac=ukrca61AOMxrxsEnCf7j49AnyoIwIsyIikReiUhm6zQ"
+        ],
+        "ean": "1234567890",
+        "variants": [
+            {
+                "id": 11,
+                "ean": "12345678901",
+                "sku": "ABC123_7",
+                "prices": {
+                    "price": 119.99,
+                    "membershipPrice": 99.99,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 11,
+                        "value": [
+                            {
+                                "label": "7",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "ean": "12345678902",
+                "sku": "ABC123_7-5",
+                "prices": {
+                    "price": 119.99,
+                    "membershipPrice": 99.99,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 12,
+                        "value": [
+                            {
+                                "label": "7.5",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 13,
+                "ean": "12345678902",
+                "sku": "ABC123_8",
+                "prices": {
+                    "price": 119.99,
+                    "membershipPrice": 99.99,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 13,
+                        "value": [
+                            {
+                                "label": "8",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 14,
+                "ean": "12345678902",
+                "sku": "ABC123_8-5",
+                "prices": {
+                    "price": 119.99,
+                    "membershipPrice": 99.99,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 14,
+                        "value": [
+                            {
+                                "label": "8.5",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 15,
+                "ean": "12345678902",
+                "sku": "ABC123_9",
+                "prices": {
+                    "price": 119.99,
+                    "membershipPrice": 99.99,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 15,
+                        "value": [
+                            {
+                                "label": "9",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 16,
+                "ean": "12345678902",
+                "sku": "ABC123_9-5",
+                "prices": {
+                    "price": 119.99,
+                    "membershipPrice": 99.99,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 16,
+                        "value": [
+                            {
+                                "label": "9.5",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 17,
+                "ean": "12345678902",
+                "sku": "ABC123_10",
+                "prices": {
+                    "price": 119.99,
+                    "membershipPrice": 99.99,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 17,
+                        "value": [
+                            {
+                                "label": "10",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            }
+        ],
+        "features": [
+            "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+            "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+        ],
+        "colours": [
+            {
+                "sku": "ABC123",
+                "colour": "Red/Black"
+            }
+        ],
+        "translations": [
+            {
+                "id": "ENGLISH",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC123 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "features": [
+                    "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+                    "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+                ],
+                "defaultCountryCode": "en-gb"
+            },
+            {
+                "id": "GERMAN",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC123 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. </p>",
+                "shortDescription": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+                "features": [
+                    "<strong> Wo kommt es her? </strong> - Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er hat Wurzeln aus der Lateinischen Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock, ein Lateinprofessor des Hampden-Sydney College in Virgnia untersuche einige undeutliche Worte, \"consectetur\", einer Lorem Ipsum Passage und fand eine unwiederlegbare Quelle. Lorem Ipsum komm aus der Sektion 1.10.32 und 1.10.33 des \"de Finibus Bonorum et Malorum\" (Die Extreme von Gut und Böse) von Cicero, geschrieben 45 v. Chr. Dieses Buch ist Abhandlung der Ethiktheorien, sehr bekannt wärend der Renaissance. Die erste Zeile des Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", kommt aus einer Zeile der Sektion 1.10.32. ",
+                    "<strong> Warum nutzen wir es? </strong> - Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach \"lorem ipsum\" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks) "
+                ],
+                "defaultCountryCode": "de-de"
+            }
+        ],
+        "parentSku": "ABC123",
+        "updatedAt": "2024-08-09T13:05:06.000Z",
+        "attributeTranslations": {}
+    },
+    {
+        "sku": "ABC456",
+        "id": 2,
+        "name": "Lorem Ipsum - ABC456",
+        "path": "",
+        "description": "<h5 align=\"center\"> Lorem Ipsum - ABC456 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+        "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "prices": {
+            "price": 89.99,
+            "membershipPrice": "",
+            "currencyCode": "GBP"
+        },
+        "images": [
+            "https://fastly.picsum.photos/id/909/200/300.jpg?hmac=jfLbR2FxyVpJjZ0VrwZWiPNfvXlOEQxNdoCE2uu4qlM",
+            "https://fastly.picsum.photos/id/786/200/300.jpg?hmac=ukrca61AOMxrxsEnCf7j49AnyoIwIsyIikReiUhm6zQ"
+        ],
+        "ean": "2345678901",
+        "variants": [
+            {
+                "id": 21,
+                "ean": "23456789011",
+                "sku": "ABC456_7",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 21,
+                        "value": [
+                            {
+                                "label": "7",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 22,
+                "ean": "23456789012",
+                "sku": "ABC456_7-5",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 22,
+                        "value": [
+                            {
+                                "label": "7.5",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 23,
+                "ean": "23456789013",
+                "sku": "ABC456_8",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 23,
+                        "value": [
+                            {
+                                "label": "8",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 24,
+                "ean": "23456789014",
+                "sku": "ABC456_8-5",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 24,
+                        "value": [
+                            {
+                                "label": "8.5",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 15,
+                "ean": "23456789015",
+                "sku": "ABC456_9",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 15,
+                        "value": [
+                            {
+                                "label": "9",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            }
+        ],
+        "features": [
+            "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+            "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+        ],
+        "colours": [
+            {
+                "sku": "ABC456",
+                "colour": "Blue"
+            }
+        ],
+        "translations": [
+            {
+                "id": "ENGLISH",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC456 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "features": [
+                    "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+                    "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+                ],
+                "defaultCountryCode": "en-gb"
+            },
+            {
+                "id": "GERMAN",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC456 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. </p>",
+                "shortDescription": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+                "features": [
+                    "<strong> Wo kommt es her? </strong> - Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er hat Wurzeln aus der Lateinischen Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock, ein Lateinprofessor des Hampden-Sydney College in Virgnia untersuche einige undeutliche Worte, \"consectetur\", einer Lorem Ipsum Passage und fand eine unwiederlegbare Quelle. Lorem Ipsum komm aus der Sektion 1.10.32 und 1.10.33 des \"de Finibus Bonorum et Malorum\" (Die Extreme von Gut und Böse) von Cicero, geschrieben 45 v. Chr. Dieses Buch ist Abhandlung der Ethiktheorien, sehr bekannt wärend der Renaissance. Die erste Zeile des Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", kommt aus einer Zeile der Sektion 1.10.32. ",
+                    "<strong> Warum nutzen wir es? </strong> - Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach \"lorem ipsum\" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks) "
+                ],
+                "defaultCountryCode": "de-de"
+            }
+        ],
+        "parentSku": "ABC456",
+        "updatedAt": "2024-08-09T13:05:06.000Z",
+        "attributeTranslations": {}
+    },
+    {
+        "sku": "ABC789",
+        "id": 3,
+        "name": "Lorem Ipsum - ABC789",
+        "path": "",
+        "description": "<h5 align=\"center\"> Lorem Ipsum - ABC789 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+        "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "prices": {
+            "price": 89.99,
+            "membershipPrice": null,
+            "currencyCode": "GBP"
+        },
+        "images": [
+            "https://fastly.picsum.photos/id/909/200/300.jpg?hmac=jfLbR2FxyVpJjZ0VrwZWiPNfvXlOEQxNdoCE2uu4qlM",
+            "https://fastly.picsum.photos/id/786/200/300.jpg?hmac=ukrca61AOMxrxsEnCf7j49AnyoIwIsyIikReiUhm6zQ"
+        ],
+        "ean": "3456789012",
+        "variants": [
+            {
+                "id": 31,
+                "ean": "34567890121",
+                "sku": "ABC789_7",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 31,
+                        "value": [
+                            {
+                                "label": "7",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 32,
+                "ean": "34567890122",
+                "sku": "ABC789_8",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 32,
+                        "value": [
+                            {
+                                "label": "8",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 33,
+                "ean": "34567890123",
+                "sku": "ABC789_8-5",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 33,
+                        "value": [
+                            {
+                                "label": "8.5",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 34,
+                "ean": "34567890124",
+                "sku": "ABC789_10",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 34,
+                        "value": [
+                            {
+                                "label": "10",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            }
+        ],
+        "features": [
+            "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+            "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+        ],
+        "colours": [
+            {
+                "sku": "ABC789",
+                "colour": "Red"
+            }
+        ],
+        "translations": [
+            {
+                "id": "ENGLISH",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC789 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "features": [
+                    "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+                    "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+                ],
+                "defaultCountryCode": "en-gb"
+            },
+            {
+                "id": "GERMAN",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC789 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. </p>",
+                "shortDescription": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+                "features": [
+                    "<strong> Wo kommt es her? </strong> - Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er hat Wurzeln aus der Lateinischen Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock, ein Lateinprofessor des Hampden-Sydney College in Virgnia untersuche einige undeutliche Worte, \"consectetur\", einer Lorem Ipsum Passage und fand eine unwiederlegbare Quelle. Lorem Ipsum komm aus der Sektion 1.10.32 und 1.10.33 des \"de Finibus Bonorum et Malorum\" (Die Extreme von Gut und Böse) von Cicero, geschrieben 45 v. Chr. Dieses Buch ist Abhandlung der Ethiktheorien, sehr bekannt wärend der Renaissance. Die erste Zeile des Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", kommt aus einer Zeile der Sektion 1.10.32. ",
+                    "<strong> Warum nutzen wir es? </strong> - Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach \"lorem ipsum\" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks) "
+                ],
+                "defaultCountryCode": "de-de"
+            }
+        ],
+        "parentSku": "ABC789",
+        "updatedAt": "2024-08-09T13:05:06.000Z",
+        "attributeTranslations": {}
+    },
+    {
+        "sku": "DEF123",
+        "id": 4,
+        "name": "Lorem Ipsum - DEF123",
+        "path": "",
+        "description": "<h5 align=\"center\"> Lorem Ipsum - DEF123 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+        "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "prices": {
+            "price": 99.99,
+            "membershipPrice": 129.99,
+            "currencyCode": "GBP"
+        },
+        "images": [
+            "https://fastly.picsum.photos/id/909/200/300.jpg?hmac=jfLbR2FxyVpJjZ0VrwZWiPNfvXlOEQxNdoCE2uu4qlM",
+            "https://fastly.picsum.photos/id/786/200/300.jpg?hmac=ukrca61AOMxrxsEnCf7j49AnyoIwIsyIikReiUhm6zQ"
+        ],
+        "ean": "4567890123",
+        "variants": [
+            {
+                "id": 41,
+                "ean": "45678901231",
+                "sku": "DEF123_7",
+                "prices": {
+                    "price": 99.99,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 41,
+                        "value": [
+                            {
+                                "label": "7",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 42,
+                "ean": "45678901232",
+                "sku": "DEF123_9",
+                "prices": {
+                    "price": 99.99,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 42,
+                        "value": [
+                            {
+                                "label": "9",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            }
+        ],
+        "features": [
+            "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+            "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+        ],
+        "colours": [
+            {
+                "sku": "DEF123",
+                "colour": "Red"
+            }
+        ],
+        "translations": [
+            {
+                "id": "ENGLISH",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - DEF123 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "features": [
+                    "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+                    "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+                ],
+                "defaultCountryCode": "en-gb"
+            },
+            {
+                "id": "GERMAN",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - DEF123 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. </p>",
+                "shortDescription": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+                "features": [
+                    "<strong> Wo kommt es her? </strong> - Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er hat Wurzeln aus der Lateinischen Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock, ein Lateinprofessor des Hampden-Sydney College in Virgnia untersuche einige undeutliche Worte, \"consectetur\", einer Lorem Ipsum Passage und fand eine unwiederlegbare Quelle. Lorem Ipsum komm aus der Sektion 1.10.32 und 1.10.33 des \"de Finibus Bonorum et Malorum\" (Die Extreme von Gut und Böse) von Cicero, geschrieben 45 v. Chr. Dieses Buch ist Abhandlung der Ethiktheorien, sehr bekannt wärend der Renaissance. Die erste Zeile des Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", kommt aus einer Zeile der Sektion 1.10.32. ",
+                    "<strong> Warum nutzen wir es? </strong> - Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach \"lorem ipsum\" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks) "
+                ],
+                "defaultCountryCode": "de-de"
+            }
+        ],
+        "parentSku": "DEF123",
+        "updatedAt": "2024-08-09T13:05:06.000Z",
+        "attributeTranslations": {}
+    },
+    {
+        "sku": "ABC789",
+        "id": 3,
+        "name": "Lorem Ipsum - ABC789",
+        "path": "",
+        "description": "<h5 align=\"center\"> Lorem Ipsum - ABC789 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+        "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "prices": {
+            "price": 89.99,
+            "membershipPrice": null,
+            "currencyCode": "GBP"
+        },
+        "images": [
+            "https://fastly.picsum.photos/id/909/200/300.jpg?hmac=jfLbR2FxyVpJjZ0VrwZWiPNfvXlOEQxNdoCE2uu4qlM",
+            "https://fastly.picsum.photos/id/786/200/300.jpg?hmac=ukrca61AOMxrxsEnCf7j49AnyoIwIsyIikReiUhm6zQ"
+        ],
+        "ean": "3456789012",
+        "variants": [
+            {
+                "id": 31,
+                "ean": "34567890121",
+                "sku": "ABC789_7",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 31,
+                        "value": [
+                            {
+                                "label": "7",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 32,
+                "ean": "34567890122",
+                "sku": "ABC789_8",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 32,
+                        "value": [
+                            {
+                                "label": "8",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 33,
+                "ean": "34567890123",
+                "sku": "ABC789_8-5",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 33,
+                        "value": [
+                            {
+                                "label": "8.5",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            },
+            {
+                "id": 34,
+                "ean": "34567890124",
+                "sku": "ABC789_10",
+                "prices": {
+                    "price": 89.99,
+                    "membershipPrice": "79.99",
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": true
+                },
+                "options": [
+                    {
+                        "id": 34,
+                        "value": [
+                            {
+                                "label": "10",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            }
+        ],
+        "features": [
+            "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+            "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+        ],
+        "colours": [
+            {
+                "sku": "ABC789",
+                "colour": "Red"
+            }
+        ],
+        "translations": [
+            {
+                "id": "ENGLISH",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC789 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "features": [
+                    "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+                    "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+                ],
+                "defaultCountryCode": "en-gb"
+            },
+            {
+                "id": "GERMAN",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - ABC789 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. </p>",
+                "shortDescription": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+                "features": [
+                    "<strong> Wo kommt es her? </strong> - Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er hat Wurzeln aus der Lateinischen Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock, ein Lateinprofessor des Hampden-Sydney College in Virgnia untersuche einige undeutliche Worte, \"consectetur\", einer Lorem Ipsum Passage und fand eine unwiederlegbare Quelle. Lorem Ipsum komm aus der Sektion 1.10.32 und 1.10.33 des \"de Finibus Bonorum et Malorum\" (Die Extreme von Gut und Böse) von Cicero, geschrieben 45 v. Chr. Dieses Buch ist Abhandlung der Ethiktheorien, sehr bekannt wärend der Renaissance. Die erste Zeile des Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", kommt aus einer Zeile der Sektion 1.10.32. ",
+                    "<strong> Warum nutzen wir es? </strong> - Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach \"lorem ipsum\" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks) "
+                ],
+                "defaultCountryCode": "de-de"
+            }
+        ],
+        "parentSku": "ABC789",
+        "updatedAt": "2024-08-09T13:05:06.000Z",
+        "attributeTranslations": {}
+    },
+    {
+        "sku": "DEF456",
+        "id": 5,
+        "name": "Lorem Ipsum - DEF456",
+        "path": "",
+        "description": "<h5 align=\"center\"> Lorem Ipsum - DEF456 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+        "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "prices": {
+            "price": 100,
+            "membershipPrice": null,
+            "currencyCode": "GBP"
+        },
+        "images": [
+            "https://fastly.picsum.photos/id/909/200/300.jpg?hmac=jfLbR2FxyVpJjZ0VrwZWiPNfvXlOEQxNdoCE2uu4qlM",
+            "https://fastly.picsum.photos/id/786/200/300.jpg?hmac=ukrca61AOMxrxsEnCf7j49AnyoIwIsyIikReiUhm6zQ"
+        ],
+        "ean": "5678901234",
+        "variants": [
+            {
+                "id": 51,
+                "ean": "5678901234",
+                "sku": "DEF456_7",
+                "prices": {
+                    "price": 100,
+                    "membershipPrice": null,
+                    "currencyCode": "GBP"
+                },
+                "inventory": {
+                    "count": null,
+                    "isInStock": false
+                },
+                "options": [
+                    {
+                        "id": 41,
+                        "value": [
+                            {
+                                "label": "7",
+                                "preorderDate": ""
+                            }
+                        ],
+                        "group": "Adult Footwear Size"
+                    }
+                ]
+            }
+        ],
+        "features": [
+            "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+            "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+        ],
+        "colours": [
+            {
+                "sku": "DEF456",
+                "colour": "Black/Blue"
+            }
+        ],
+        "translations": [
+            {
+                "id": "ENGLISH",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - DEF456 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>",
+                "shortDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "features": [
+                    "<strong> Where does it come from? </strong> - Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32. ",
+                    "<strong> Why do we use it? </strong> - It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). "
+                ],
+                "defaultCountryCode": "en-gb"
+            },
+            {
+                "id": "GERMAN",
+                "description": "<h5 align=\"center\"> Lorem Ipsum - DEF456 </h5> \r\n\r\n<hr/>\r\n\r\n<p align=\"center\"> Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker. </p>",
+                "shortDescription": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+                "features": [
+                    "<strong> Wo kommt es her? </strong> - Glauben oder nicht glauben, Lorem Ipsum ist nicht nur ein zufälliger Text. Er hat Wurzeln aus der Lateinischen Literatur von 45 v. Chr, was ihn über 2000 Jahre alt macht. Richar McClintock, ein Lateinprofessor des Hampden-Sydney College in Virgnia untersuche einige undeutliche Worte, \"consectetur\", einer Lorem Ipsum Passage und fand eine unwiederlegbare Quelle. Lorem Ipsum komm aus der Sektion 1.10.32 und 1.10.33 des \"de Finibus Bonorum et Malorum\" (Die Extreme von Gut und Böse) von Cicero, geschrieben 45 v. Chr. Dieses Buch ist Abhandlung der Ethiktheorien, sehr bekannt wärend der Renaissance. Die erste Zeile des Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", kommt aus einer Zeile der Sektion 1.10.32. ",
+                    "<strong> Warum nutzen wir es? </strong> - Es ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht. Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach \"lorem ipsum\" macht viele Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks) "
+                ],
+                "defaultCountryCode": "de-de"
+            }
+        ],
+        "parentSku": "DEF456",
+        "updatedAt": "2024-08-09T13:05:06.000Z",
+        "attributeTranslations": {}
+    }
+]
