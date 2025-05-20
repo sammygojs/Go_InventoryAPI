@@ -11,7 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
 )
 
-func LoadProductsFromDynamo(minPrice, maxPrice float64, inStock bool, colour string) (*models.Products, error) {
+func LoadProductsFromDynamo() (*models.Products, error) {
 	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion("us-east-1"))
 	if err != nil {
 		return nil, fmt.Errorf("❌ Failed to load AWS config: %w", err)
@@ -19,25 +19,8 @@ func LoadProductsFromDynamo(minPrice, maxPrice float64, inStock bool, colour str
 
 	client := dynamodb.NewFromConfig(cfg)
 
-	filterExpr := "price >= :min AND price <= :max"
-	exprAttrVals := map[string]types.AttributeValue{
-		":min": &types.AttributeValueMemberN{Value: fmt.Sprintf("%.2f", minPrice)},
-		":max": &types.AttributeValueMemberN{Value: fmt.Sprintf("%.2f", maxPrice)},
-	}
-
-	if inStock {
-		filterExpr += " AND inStock = :stock"
-		exprAttrVals[":stock"] = &types.AttributeValueMemberBOOL{Value: true}
-	}
-	if colour != "" {
-		filterExpr += " AND contains(colour, :colour)"
-		exprAttrVals[":colour"] = &types.AttributeValueMemberS{Value: colour}
-	}
-
 	out, err := client.Scan(context.TODO(), &dynamodb.ScanInput{
-		TableName:                 aws.String("ProductsTable"),
-		FilterExpression:          aws.String(filterExpr),
-		ExpressionAttributeValues: exprAttrVals,
+		TableName: aws.String("ProductsTable"),
 	})
 	if err != nil {
 		return nil, fmt.Errorf("❌ Failed to scan DynamoDB: %w", err)
@@ -54,6 +37,7 @@ func LoadProductsFromDynamo(minPrice, maxPrice float64, inStock bool, colour str
 		Products: productList,
 	}, nil
 }
+
 
 func LoadSingleProductFromDynamo(id int) (*models.Product, error) {
 	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion("us-east-1"))

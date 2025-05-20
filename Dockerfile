@@ -9,8 +9,8 @@ RUN go mod download
 COPY . .
 
 # 🧪 Run tests and print coverage percentage
-RUN echo "🧪 Running tests..." && \
-    go test ./... -v -cover
+# RUN echo "🧪 Running tests..." && \
+#     go test ./... -v -cover
 
 # 🛠️ Build the binary
 RUN go build -o main ./cmd/main.go

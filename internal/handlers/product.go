@@ -9,6 +9,7 @@ import (
 	"ProductsAPI/internal/utils"
 	"strings"
 	"log"
+	"sort" 
 )
 
 var cachedProducts *models.Products
@@ -18,28 +19,36 @@ func SetCachedProducts(p *models.Products) {
 }
 
 func GetProducts(c *gin.Context) {
+	// Parse filters
 	minPrice, _ := strconv.ParseFloat(c.Query("minPrice"), 64)
 	maxPrice, _ := strconv.ParseFloat(c.Query("maxPrice"), 64)
 	inStock := c.Query("inStock") == "true"
 	colourFilter := strings.ToLower(c.Query("colour"))
 
-	// ✅ Apply defaults
+	// Parse pagination
+	limit, _ := strconv.Atoi(c.DefaultQuery("limit", "10"))
+	startID, _ := strconv.Atoi(c.DefaultQuery("startID", "0")) // optional
+
+	// Set defaults
 	if minPrice == 0 {
 		minPrice = 0
 	}
 	if maxPrice == 0 {
-		maxPrice = 999999 // or whatever upper limit you want
+		maxPrice = 999999
 	}
-	
-	cachedProducts, err := utils.LoadProductsFromDynamo(minPrice, maxPrice, inStock, colourFilter)
+	if limit <= 0 {
+		limit = 10
+	}
 
+	// Load all
+	cachedProducts, err := utils.LoadProductsFromDynamo()
 	if err != nil {
 		log.Printf("❌ Error loading products from Dynamo: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not load products"})
 		return
 	}
 
-	// Locale detection
+	// Locale + membership
 	locale := c.GetHeader("Accept-Language")
 	if locale == "" {
 		locale = c.Query("locale")
@@ -47,20 +56,11 @@ func GetProducts(c *gin.Context) {
 	if len(locale) > 5 {
 		locale = locale[:5]
 	}
-
-	// Membership detection
 	isMember := c.GetHeader("X-Member") == "true"
 
-	// Parse filter params
-	minPrice, _ = strconv.ParseFloat(c.Query("minPrice"), 64)
-	maxPrice, _ = strconv.ParseFloat(c.Query("maxPrice"), 64)
-	inStock = c.Query("inStock") == "true"
-	colourFilter = strings.ToLower(c.Query("colour"))
-
+	// Filtered + translated
 	filtered := make([]*models.Product, 0, len(cachedProducts.Products))
-
 	for _, p := range cachedProducts.Products {
-		// clone := *p
 		var clone models.Product
 		data, _ := json.Marshal(p)
 		_ = json.Unmarshal(data, &clone)
@@ -70,20 +70,53 @@ func GetProducts(c *gin.Context) {
 		}
 		ApplyMembershipPricing(&clone, isMember)
 
-		// // Apply filtering
-		// if !productMatchesFilters(&clone, minPrice, maxPrice, inStock, colourFilter) {
-		// 	continue
-		// }
+		if !productMatchesFilters(&clone, minPrice, maxPrice, inStock, colourFilter) {
+			continue
+		}
 
 		filtered = append(filtered, &clone)
 	}
 
-	c.JSON(http.StatusOK, models.Products{
-		Count:    len(filtered),
-		Total:    len(filtered),
-		Products: filtered,
+	// Sort by ID (optional but stable)
+	sort.Slice(filtered, func(i, j int) bool {
+		return filtered[i].ID < filtered[j].ID
+	})
+
+	// Apply pagination based on startID
+	startIndex := 0
+	if startID > 0 {
+		for i, p := range filtered {
+			if p.ID == startID {
+				startIndex = i + 1 // exclude current
+				break
+			}
+		}
+	}
+
+	// Paginate
+	endIndex := startIndex + limit
+	if endIndex > len(filtered) {
+		endIndex = len(filtered)
+	}
+	page := filtered[startIndex:endIndex]
+
+	// Determine next startID
+	var nextStartID *int
+	if endIndex < len(filtered) {
+		next := filtered[endIndex].ID
+		nextStartID = &next
+	}
+
+	// Response
+	c.JSON(http.StatusOK, gin.H{
+		"count":       len(page),
+		"total":       len(filtered),
+		"products":    page,
+		"hasMore":     nextStartID != nil,
+		"nextStartID": nextStartID,
 	})
 }
+
 
 func GetProduct(c *gin.Context) {
 	idParam := c.Param("productID")

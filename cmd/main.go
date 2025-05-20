@@ -31,7 +31,7 @@ func main() {
 
 		products := api.Group("/products")
 		{
-			products.GET("/", handlers.GetProducts)
+			products.GET("", handlers.GetProducts)
 			products.GET("/:productID", handlers.GetProduct)
 		}
 	}
