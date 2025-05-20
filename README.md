@@ -1,4 +1,4 @@
-# 🛍️ Go\_InventoryAPI – AWS GoLang REST API
+# 🛍️ GoInventoryAPI – AWS GoLang REST API
 
 A scalable, cloud-native REST API built in **GoLang**, deployed using **Docker + ECS (Fargate)**, and delivered through a full **CI/CD pipeline on AWS**. The API supports **product listing**, **filtering**, **localization**, and **membership-based pricing**.
 
@@ -171,7 +171,7 @@ GitHub → CodePipeline → CodeBuild → ECS Update
 ## 👨‍💻 Authors & Contributions
 
 Made with ❤️ by your development team. Maintainers:
- 
+
 https://www.linkedin.com/in/sumitakoliya/
 
 https://sumitakoliya.com
