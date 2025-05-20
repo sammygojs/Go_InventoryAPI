@@ -84,7 +84,6 @@ type Option struct {
 type ImageList []*Image
 
 func (il *ImageList) UnmarshalJSON(data []byte) error {
-	// Attempt 1: Parse as []string
 	var urls []string
 	if err := json.Unmarshal(data, &urls); err == nil {
 		var list []*Image
@@ -95,7 +94,6 @@ func (il *ImageList) UnmarshalJSON(data []byte) error {
 		return nil
 	}
 
-	// Attempt 2: Parse as []Image
 	var objects []*Image
 	if err := json.Unmarshal(data, &objects); err == nil {
 		*il = objects

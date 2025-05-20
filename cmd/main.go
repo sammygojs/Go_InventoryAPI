@@ -15,29 +15,22 @@ func main() {
         log.Println("⚠️  No .env file found (using system env)")
     }
 
-	// Just for confirmation
 	fmt.Println("USE_DYNAMO:", os.Getenv("USE_DYNAMO"))
 
 	router := gin.Default()
 	
+	//health check for ECS
 	router.GET("/healthz", func(c *gin.Context) {
 		c.JSON(200, gin.H{"status": "ok"})
 	})
 	
 	api := router.Group("/api")
 	{
-		fmt.Println("✅ Registered /api/query-db route")
-		api.GET("/query-db", handlers.QueryDB) // ✅ Correct group
-
 		products := api.Group("/products")
 		{
 			products.GET("", handlers.GetProducts)
 			products.GET("/:productID", handlers.GetProduct)
 		}
 	}
-	for _, route := range router.Routes() {
-		fmt.Printf("📦 ROUTE REGISTERED: %s %s\n", route.Method, route.Path)
-	}
-
 	router.Run(":8080")
 }

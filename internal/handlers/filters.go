@@ -9,7 +9,6 @@ func ProductMatchesFilters(p *models.Product, minPrice, maxPrice float64, requir
 	matchesPrice := false
 	matchesStock := false
 
-	// Check price + stock across variants
 	for _, v := range p.Variants {
 		price := v.Prices.Price
 
@@ -27,11 +26,9 @@ func ProductMatchesFilters(p *models.Product, minPrice, maxPrice float64, requir
 		return false
 	}
 
-	// Check colour match
 	if colour != "" {
 		found := false
 		for _, c := range p.Colours {
-			// Split Red/Black into [red, black]
 			parts := strings.Split(strings.ToLower(c.Colour), "/")
 			for _, part := range parts {
 				if part == colour {

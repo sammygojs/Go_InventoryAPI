@@ -17,7 +17,7 @@ func TestGetProductsIntegration(t *testing.T) {
 	router.GET("/api/products", handlers.GetProducts)
 
 	// Mock data
-	handlers.SetCachedProducts(mockProducts()) // ✅ You need to create a `MockProducts()` function returning sample products
+	handlers.SetCachedProducts(mockProducts()) 
 
 	// Create request
 	req, _ := http.NewRequest("GET", "/api/products?limit=2&colour=red", nil)

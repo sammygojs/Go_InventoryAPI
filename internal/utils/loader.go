@@ -19,7 +19,7 @@ func LoadProductsFromDynamo() (*models.Products, error) {
 
 	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion("us-east-1"))
 	if err != nil {
-		return nil, fmt.Errorf("❌ Failed to load AWS config: %w", err)
+		return nil, fmt.Errorf("Failed to load AWS config: %w", err)
 	}
 
 	client := dynamodb.NewFromConfig(cfg)
@@ -28,12 +28,12 @@ func LoadProductsFromDynamo() (*models.Products, error) {
 		TableName: aws.String("ProductsTable"),
 	})
 	if err != nil {
-		return nil, fmt.Errorf("❌ Failed to scan DynamoDB: %w", err)
+		return nil, fmt.Errorf("Failed to scan DynamoDB: %w", err)
 	}
 
 	var productList []*models.Product
 	if err := attributevalue.UnmarshalListOfMaps(out.Items, &productList); err != nil {
-		return nil, fmt.Errorf("❌ Failed to unmarshal products: %w", err)
+		return nil, fmt.Errorf("Failed to unmarshal products: %w", err)
 	}
 
 	return &models.Products{
@@ -47,7 +47,7 @@ func LoadProductsFromDynamo() (*models.Products, error) {
 func LoadSingleProductFromDynamo(id int) (*models.Product, error) {
 	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion("us-east-1"))
 	if err != nil {
-		return nil, fmt.Errorf("❌ Failed to load AWS config: %w", err)
+		return nil, fmt.Errorf("Failed to load AWS config: %w", err)
 	}
 
 	client := dynamodb.NewFromConfig(cfg)
@@ -59,7 +59,7 @@ func LoadSingleProductFromDynamo(id int) (*models.Product, error) {
 		},
 	})
 	if err != nil {
-		return nil, fmt.Errorf("❌ Failed to get product from DynamoDB: %w", err)
+		return nil, fmt.Errorf("Failed to get product from DynamoDB: %w", err)
 	}
 	if out.Item == nil || len(out.Item) == 0 {
 		return nil, nil
@@ -67,7 +67,7 @@ func LoadSingleProductFromDynamo(id int) (*models.Product, error) {
 
 	var product models.Product
 	if err := attributevalue.UnmarshalMap(out.Item, &product); err != nil {
-		return nil, fmt.Errorf("❌ Failed to unmarshal product: %w", err)
+		return nil, fmt.Errorf("Failed to unmarshal product: %w", err)
 	}
 
 	return &product, nil
@@ -117,30 +117,3 @@ func mockProducts() *models.Products {
 func ptr(s string) *string {
 	return &s
 }
-
-// func LoadProductsFromDynamo() (*models.Products, error) {
-// 	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion("us-east-1"))
-// 	if err != nil {
-// 		return nil, fmt.Errorf("❌ Failed to load AWS config: %w", err)
-// 	}
-
-// 	client := dynamodb.NewFromConfig(cfg)
-
-// 	out, err := client.Scan(context.TODO(), &dynamodb.ScanInput{
-// 		TableName: aws.String("ProductsTable"),
-// 	})
-// 	if err != nil {
-// 		return nil, fmt.Errorf("❌ Failed to scan DynamoDB: %w", err)
-// 	}
-
-// 	var productList []*models.Product
-// 	if err := attributevalue.UnmarshalListOfMaps(out.Items, &productList); err != nil {
-// 		return nil, fmt.Errorf("❌ Failed to unmarshal products: %w", err)
-// 	}
-
-// 	return &models.Products{
-// 		Count:    len(productList),
-// 		Total:    len(productList),
-// 		Products: productList,
-// 	}, nil
-// }
