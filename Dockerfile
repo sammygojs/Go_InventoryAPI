@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-RUN echo "nit tests..." && \
+RUN echo "Unit tests..." && \
     USE_MOCK_PRODUCTS=true go test ./... -v
 
 RUN go build -o main ./cmd/main.go
