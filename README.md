@@ -4,6 +4,12 @@ A scalable, cloud-native REST API built in **GoLang**, deployed using **Docker +
 
 ---
 
+## 📸 Architecture Diagram
+
+![Architecture Diagram](assets/AwsArch.jpeg)
+
+---
+
 ## 🚀 Live Demo
 
 > **[GET All Products](http://productsapi-alb-1117553191.us-east-1.elb.amazonaws.com/api/products)**
@@ -133,12 +139,6 @@ Unit tests include filters and translation logic. Integration tests hit actual e
 User → ALB → ECS (Go App) → DynamoDB → Response
 GitHub → CodePipeline → CodeBuild → ECS Update
 ```
-
----
-
-## 📸 Architecture Diagram
-
-![Architecture Diagram](assets/AwsArch.jpeg)
 
 ---
 
