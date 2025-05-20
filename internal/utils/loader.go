@@ -9,9 +9,14 @@ import (
 	"github.com/aws/aws-sdk-go-v2/feature/dynamodb/attributevalue"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb"
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
+	"os"
 )
 
 func LoadProductsFromDynamo() (*models.Products, error) {
+	if os.Getenv("USE_MOCK_PRODUCTS") == "true" {
+		return mockProducts(), nil
+	}
+
 	cfg, err := config.LoadDefaultConfig(context.TODO(), config.WithRegion("us-east-1"))
 	if err != nil {
 		return nil, fmt.Errorf("❌ Failed to load AWS config: %w", err)
@@ -66,6 +71,51 @@ func LoadSingleProductFromDynamo(id int) (*models.Product, error) {
 	}
 
 	return &product, nil
+}
+
+func mockProducts() *models.Products {
+	return &models.Products{
+		Count: 1,
+		Total: 1,
+		Products: []*models.Product{
+			{
+				ID:    1,
+				SKU:   "MOCK123",
+				Brand: "MockBrand",
+				ShortDescription: ptr("Mock Description"),
+				Colours: []models.Colour{
+					{SKU: "MOCK123", Colour: "Red/Black"},
+				},
+				Variants: []*models.Variant{
+					{
+						ID: 1,
+						SKU: "MOCK123",
+						Prices: struct {
+							Price           float64     `json:"price"`
+							MembershipPrice interface{} `json:"membershipPrice"`
+							CurrencyCode    string      `json:"currencyCode"`
+						}{Price: 119.99, MembershipPrice: 99.99, CurrencyCode: "GBP"},
+						Inventory: struct {
+							Count     interface{} `json:"count"`
+							IsInStock bool        `json:"isInStock"`
+						}{IsInStock: true},
+					},
+				},
+				Translations: []models.Translation{
+					{
+						DefaultCountryCode: "en-gb",
+						Description:        "Mock translated description",
+						ShortDescription:   "Mock short",
+						Features:           []string{"Feature A"},
+					},
+				},
+			},
+		},
+	}
+}
+
+func ptr(s string) *string {
+	return &s
 }
 
 // func LoadProductsFromDynamo() (*models.Products, error) {

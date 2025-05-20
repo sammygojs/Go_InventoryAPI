@@ -5,7 +5,7 @@ import (
 	"ProductsAPI/internal/models"
 )
 
-func productMatchesFilters(p *models.Product, minPrice, maxPrice float64, requireInStock bool, colour string) bool {
+func ProductMatchesFilters(p *models.Product, minPrice, maxPrice float64, requireInStock bool, colour string) bool {
 	matchesPrice := false
 	matchesStock := false
 

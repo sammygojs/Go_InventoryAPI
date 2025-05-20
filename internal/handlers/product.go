@@ -70,7 +70,7 @@ func GetProducts(c *gin.Context) {
 		}
 		ApplyMembershipPricing(&clone, isMember)
 
-		if !productMatchesFilters(&clone, minPrice, maxPrice, inStock, colourFilter) {
+		if !ProductMatchesFilters(&clone, minPrice, maxPrice, inStock, colourFilter) {
 			continue
 		}
 
