@@ -38,23 +38,8 @@ curl -H "Accept-Language: en-gb" \
 
 This project is designed to be run using Docker for consistency. Follow the steps below to build and launch the app with AWS access:
 
-### ✅ Step 1 – Build the Docker image:
-
-```bash
-docker build -t products-api .
-```
-
-### ✅ Step 2 – Run the Docker container with IAM credentials:
-
-```bash
-docker run -it --rm \
-  -e AWS_ACCESS_KEY_ID=AKIAZQ3DS573TVGEP3XW \
-  -e AWS_SECRET_ACCESS_KEY=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 \
-  -e AWS_REGION=us-east-1 \
-  -e USE_DYNAMO=true \
-  -p 8080:8080 \
-  products-api
-```
+### ✅ Step 1 – Build the Docker image & Run the Docker container with IAM credentials:
+Check runner.txt in root when you extract the zip
 
 Once running, visit: `http://localhost:8080/api/products`
 
