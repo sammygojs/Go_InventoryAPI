@@ -1,38 +1,189 @@
-# One iota Technical Tasks
+# 🛍️ Go\_InventoryAPI – AWS GoLang REST API
 
-## Solution Architecture Task
+A scalable, cloud-native REST API built in **GoLang**, deployed using **Docker + ECS (Fargate)**, and delivered through a full **CI/CD pipeline on AWS**. The API supports **product listing**, **filtering**, **localization**, and **membership-based pricing**.
 
-A client has multiple systems that they want to integrate into their mobile app: an e-commerce platform, a shipment system, and a payment provider. Your job is to think about the best way to serve these to a mobile app via a single anonymous wrapper, using services common to cloud hosting providers. You can use which ever cloud provider you wish for this task.
+---
 
-Please draw up an integration diagram showing the flow, from how the mobile app will interact with your wrapper, to fetch and send data to these client systems.
+## 🚀 Live Demo
 
-## Product REST API Task
+> **[GET All Products](http://productsapi-alb-1117553191.us-east-1.elb.amazonaws.com/api/products)**
+> `http://productsapi-alb-1117553191.us-east-1.elb.amazonaws.com/api/products`
 
-For this task, we would like you to create two endpoints for querying data. We have provided you with a JSON file containing test data.
+### ✅ Headers Supported:
 
-### Endpoints
-- For the first endpoint, you will need to return a list of products using the test data. We would also like you to show how many products there are in general in the response. You should also be able to reduce the amount of products coming back using a `limit` query parameter.
-- For the second endpoint, you will need to return a single product based on an id path parameter.
+```http
+Accept-Language: en-gb | de-de
+X-Member: true | false
+```
 
-#### Extra Tasks
-- We would like you to handle a `locale` being provided in the request, which will change the descriptions and features of the product based on the given `locale`.
-- We would also like to see you displaying membership pricing, if it is less than the standard, based on the user that is making the request. We should be able to make a request against both endpoints as a non-member and member user and see the correct pricing.
-- In the get products endpoint we would like to be able to filter products based on: `minPrice`, `maxPrice`, `inStock`, `colour` (if a product has multiple colours, it should return for both, e.g. if the product colour is Red/Black then it will return when querying `colour=red` or `colour=black`).
+### 🔎 Query Parameters:
 
-All of the models that we would like you to map the data against have been provided. Please try to fill as much data as you can in these models. Along with this we have also provided you with a basic starting point for this task, which you can find in the `main.go` file.
+* `limit` → limits number of products (e.g., `?limit=3`)
+* `minPrice` → filter products with price ≥ x
+* `maxPrice` → filter products with price ≤ x
+* `inStock` → true / false
+* `colour` → partial match (e.g., `red`, `black`)
 
-Once you have completed the task, please submit your code, any tests, and instructions for running the the REST API task, as well as your architecture diagram.
+### 🧪 Example Request:
 
-If you have any questions feel free to get in touch with us via email at [recruitment@oneiota.co.uk](mailto:recruitment@oneiota.co.uk).
+```bash
+curl -H "Accept-Language: en-gb" \
+     -H "X-Member: true" \
+     "http://productsapi-alb-1117553191.us-east-1.elb.amazonaws.com/api/products?limit=2&colour=black"
+```
 
-Good luck!
+---
 
-## FAQs
+## 🐳 Docker Build & Run (Temporary IAM Credentials)
 
-##### Which language should I use?
-The role is mostly Go so you should try to undertake the task using this language.
+This project is designed to be run using Docker for consistency. Follow the steps below to build and launch the app with AWS access:
 
-##### Which cloud provider would be best for the architecture task?
-We use AWS, so if you want to base the architecture task on something similar to what we would do, that would be great. But the decision is yours.
+### ✅ Step 1 – Build the Docker image:
 
-# ProductsAPI
+```bash
+docker build -t products-api .
+```
+
+### ✅ Step 2 – Run the Docker container with IAM credentials:
+
+```bash
+docker run -it --rm \
+  -e AWS_ACCESS_KEY_ID=AKIAZQ3DS573TVGEP3XW \
+  -e AWS_SECRET_ACCESS_KEY=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 \
+  -e AWS_REGION=us-east-1 \
+  -e USE_DYNAMO=true \
+  -p 8080:8080 \
+  products-api
+```
+
+Once running, visit: `http://localhost:8080/api/products`
+
+---
+
+## ✨ Features Implemented
+
+* ✅ `GET /api/products` — returns a list of products with optional filters
+* ✅ `GET /api/products/:id` — returns a single product by ID
+* ✅ **Locale-based translations** for `description`, `features`, and `shortDescription`
+* ✅ **Membership pricing** support (shows discounted price if `X-Member: true`)
+* ✅ **Filtering** support for:
+
+  * `minPrice` / `maxPrice`
+  * `inStock`
+  * `colour` (partial match like "red" in "Red/Black")
+* ✅ **Pagination** via `limit` query param
+* ✅ Fully **Dockerized** for local and production builds
+* ✅ Hosted on **ECS Fargate** and exposed via **Application Load Balancer (ALB)**
+* ✅ **CI/CD** using **CodePipeline** and **CodeBuild**
+* ✅ Logs via **CloudWatch**, IAM roles scoped securely
+* ✅ Includes **unit and integration tests** for robustness
+
+---
+
+## 📦 Backend Details
+
+Built with the Gin web framework and AWS SDK v2, the application provides fast and flexible REST endpoints designed to power product listings and detail views.
+
+### Endpoints:
+
+* **GET /api/products**: List all products with optional filters and pagination.
+* **GET /api/products/\:productID**: Retrieve detailed information about a single product.
+* **GET /api/query-db**: Raw DynamoDB scan (primarily for debug/dev).
+
+---
+
+## 📁 Project Structure
+
+```
+Go_InventoryAPI/
+├── cmd/                   # Entry point
+├── internal/
+│   ├── handlers/         # API route logic
+│   │   ├── product.go
+│   │   ├── filters.go
+│   │   ├── locale.go
+│   │   └── pricing.go
+│   ├── models/           # Product model schemas
+│   │   └── product.go
+│   └── utils/            # DynamoDB logic, filtering, translation
+│       ├── loader.go
+│       └── loader_mock.go
+├── test/                 # Unit + integration tests
+│   ├── unitTests/
+│   └── product_test.go
+├── Dockerfile            # Multi-stage build and test
+├── buildspec.yml         # AWS CodeBuild instructions
+├── terraform/            # Infrastructure as code (optional)
+├── .env.example          # Environment variables reference
+├── .gitignore
+└── README.md             # You are here
+```
+
+---
+
+## 🧪 Running Tests
+
+To run all tests:
+
+```bash
+go test ./... -v
+```
+
+Unit tests include filters and translation logic. Integration tests hit actual endpoints and validate full flow.
+
+---
+
+## 🧱 AWS Services Used
+
+* **ALB** in two public subnets (multi-AZ)
+* **ECS Fargate** service with Go app container
+* **DynamoDB** for high-throughput NoSQL storage
+* **CodePipeline + CodeBuild** for CI/CD
+* **CloudWatch** for centralized logging
+* **IAM roles** restrict access to only needed services
+
+### 📡 Request Flow
+
+```
+User → ALB → ECS (Go App) → DynamoDB → Response
+GitHub → CodePipeline → CodeBuild → ECS Update
+```
+
+---
+
+## 📸 Architecture Diagram
+
+![Architecture Diagram](assets/AwsArch.jpeg)
+
+---
+
+## 📝 Submission Highlights
+
+* ✅ Hosted API is live and tested
+* ✅ CI/CD enabled via GitHub push → CodePipeline → ECS
+* ✅ Tested: both unit & integration levels
+* ✅ Dockerized for consistency
+* ✅ Clean project structure, clear docs
+* ✅ Production-ready AWS-native architecture
+
+---
+
+## 👨‍💻 Authors & Contributions
+
+Made with ❤️ by your development team. Maintainers:
+ 
+https://www.linkedin.com/in/sumitakoliya/
+
+https://sumitakoliya.com
+
+https://github.com/sammygojs
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+Enjoy exploring ProductsAPI! 🚀
