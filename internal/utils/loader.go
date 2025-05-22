@@ -25,7 +25,8 @@ func LoadProductsFromDynamo() (*models.Products, error) {
 	client := dynamodb.NewFromConfig(cfg)
 
 	out, err := client.Scan(context.TODO(), &dynamodb.ScanInput{
-		TableName: aws.String("ProductsTable"),
+		// TableName: aws.String("ProductsTable"),
+		TableName: aws.String("TestProductsDB"),
 	})
 	if err != nil {
 		return nil, fmt.Errorf("Failed to scan DynamoDB: %w", err)
@@ -53,7 +54,8 @@ func LoadSingleProductFromDynamo(id int) (*models.Product, error) {
 	client := dynamodb.NewFromConfig(cfg)
 
 	out, err := client.GetItem(context.TODO(), &dynamodb.GetItemInput{
-		TableName: aws.String("ProductsTable"),
+		// TableName: aws.String("ProductsTable"),
+		TableName: aws.String("TestProductsDB"),
 		Key: map[string]types.AttributeValue{
 			"id": &types.AttributeValueMemberN{Value: fmt.Sprintf("%d", id)},
 		},
@@ -81,7 +83,6 @@ func mockProducts() *models.Products {
 			{
 				ID:    1,
 				SKU:   "MOCK123",
-				Brand: "MockBrand",
 				ShortDescription: ptr("Mock Description"),
 				Colours: []models.Colour{
 					{SKU: "MOCK123", Colour: "Red/Black"},

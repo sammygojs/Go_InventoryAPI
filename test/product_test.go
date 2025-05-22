@@ -48,10 +48,10 @@ func mockProducts() *models.Products {
 			{
 				ID:    1,
 				SKU:   "MOCK123",
-				Brand: "MockBrand",
 				ShortDescription: ptr("Mock product"),
 				Colours: []models.Colour{
-					{SKU: "MOCK123", Colour: "Red/Black"},
+					{SKU: "MOCK123", Colour: "Red"},
+					{SKU: "MOCK123", Colour: "Black"},
 				},
 				Variants: []*models.Variant{
 					{

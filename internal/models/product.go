@@ -4,9 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 )
+// type Colour struct {
+// 	SKU    string `json:"sku"`
+// 	Colour string `json:"colour"`
+// }
+
 type Colour struct {
-	SKU    string `json:"sku"`
-	Colour string `json:"colour"`
+	SKU    string `json:"sku" dynamodbav:"sku"`
+	Colour string `json:"colour" dynamodbav:"colour"`
 }
 
 type Translation struct {
@@ -29,14 +34,15 @@ type Product struct {
 	Name             string    `json:"name"`
 	ShortDescription *string   `json:"shortDescription"`
 	LongDescription  *string   `json:"longDescription"`
-	Brand            string    `json:"brand"`
-	Price            *Money    `json:"price"`
+	// Brand            string    `json:"brand"`
+	// Price            *Money    `json:"price"`
 	Features         []string  `json:"features,omitempty"`
 	Images 			 ImageList `json:"images"`
-	Options          []*Option `json:"options"`
+	// Options          []*Option `json:"options"`
 	Variants         []*Variant  `json:"variants"`
 	Translations     []Translation `json:"translations"`
 	Colours          []Colour      `json:"colours"`
+	// Colours          string     `json:"colours"`
 }
 
 type Variant struct {

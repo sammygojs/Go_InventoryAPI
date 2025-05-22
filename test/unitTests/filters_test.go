@@ -22,7 +22,8 @@ func TestProductMatchesFilters(t *testing.T) {
 			},
 		},
 		Colours: []models.Colour{
-			{Colour: "Red/Black"},
+			{Colour: "Red"},
+			{Colour: "Black"},
 		},
 	}
 
