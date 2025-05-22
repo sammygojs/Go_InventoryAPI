@@ -1,4 +1,4 @@
-package utils
+package db
 
 import (
 	"context"
@@ -32,10 +32,15 @@ func LoadProductsFromDynamo() (*models.Products, error) {
 		return nil, fmt.Errorf("Failed to scan DynamoDB: %w", err)
 	}
 
+	// I expect DynamoDB to return many products, and I want each of them stored as a pointer in this list.
 	var productList []*models.Product
+	// Take this messy JSON-ish DynamoDB output and decode it into []*models.Product
 	if err := attributevalue.UnmarshalListOfMaps(out.Items, &productList); err != nil {
 		return nil, fmt.Errorf("Failed to unmarshal products: %w", err)
 	}
+
+	// jsonData, _ := json.MarshalIndent(productList, "", "  ")
+	// log.Println("[DEBUG] Full Product List:\n", string(jsonData))
 
 	return &models.Products{
 		Count:    len(productList),

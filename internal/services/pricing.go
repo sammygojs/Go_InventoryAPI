@@ -1,4 +1,4 @@
-package handlers
+package services
 
 import (
 	"ProductsAPI/internal/models"

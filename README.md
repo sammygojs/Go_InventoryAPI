@@ -91,12 +91,13 @@ Go_InventoryAPI/
 ├── internal/
 │   ├── handlers/         # API route logic
 │   │   ├── product.go
+│   ├── services/         # Services logic
 │   │   ├── filters.go
 │   │   ├── locale.go
 │   │   └── pricing.go
 │   ├── models/           # Product model schemas
 │   │   └── product.go
-│   └── utils/            # DynamoDB logic, filtering, translation
+│   └── db/            # DynamoDB logic, filtering, translation
 │       ├── loader.go
 │       └── loader_mock.go
 ├── test/                 # Unit + integration tests

@@ -1,7 +1,7 @@
 //go:build test
 // +build test
 
-package utils
+package db
 
 import "ProductsAPI/internal/models"
 

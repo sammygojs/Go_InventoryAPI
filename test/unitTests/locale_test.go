@@ -3,7 +3,7 @@ package handlers
 import (
 	"testing"
 	"ProductsAPI/internal/models"
-	"ProductsAPI/internal/handlers"
+	"ProductsAPI/internal/services"
 )
 
 func TestApplyTranslation(t *testing.T) {
@@ -18,7 +18,7 @@ func TestApplyTranslation(t *testing.T) {
 		},
 	}
 
-	handlers.ApplyTranslation(p, "en-GB")
+	services.ApplyTranslation(p, "en-GB")
 
 	if p.ShortDescription == nil || *p.ShortDescription != "English short" {
 		t.Error("Translation not applied correctly to ShortDescription")

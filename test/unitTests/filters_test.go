@@ -3,7 +3,7 @@ package handlers
 import (
 	"testing"
 	"ProductsAPI/internal/models"
-	"ProductsAPI/internal/handlers"
+	"ProductsAPI/internal/services"
 )
 
 func TestProductMatchesFilters(t *testing.T) {
@@ -39,7 +39,7 @@ func TestProductMatchesFilters(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		got := handlers.ProductMatchesFilters(product, tt.min, tt.max, tt.inStock, tt.colour)
+		got := services.ProductMatchesFilters(product, tt.min, tt.max, tt.inStock, tt.colour)
 		if got != tt.want {
 			t.Errorf("Failed for input min=%v max=%v stock=%v colour=%v", tt.min, tt.max, tt.inStock, tt.colour)
 		}
