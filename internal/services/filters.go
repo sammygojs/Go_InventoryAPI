@@ -5,46 +5,37 @@ import (
 	"ProductsAPI/internal/models"
 )
 
-func ProductMatchesFilters(p *models.Product, minPrice, maxPrice float64, requireInStock bool, colour string) bool {
-	matchesPrice := false
-	matchesStock := false
+func ProductMatchesFilters(p *models.Product, minPrice, maxPrice float64, requireInStock bool, stockFilterApplied bool, colour string) bool {
+	priceMatch := false
+	stockMatch := false
 
 	for _, v := range p.Variants {
 		price := v.Prices.Price
-
-		if (minPrice == 0 || price >= minPrice) &&
-			(maxPrice == 0 || price <= maxPrice) {
-			matchesPrice = true
+		if price >= minPrice && price <= maxPrice {
+			priceMatch = true
 		}
 
-		if !requireInStock || v.Inventory.IsInStock {
-			matchesStock = true
+		if !stockFilterApplied || v.Inventory.IsInStock == requireInStock {
+			stockMatch = true
 		}
 	}
 
-	if !matchesPrice || !matchesStock {
+	if !priceMatch || !stockMatch {
 		return false
 	}
 
 	if colour != "" {
-		found := false
+		target := strings.ToLower(colour)
 		for _, c := range p.Colours {
 			parts := strings.Split(strings.ToLower(c.Colour), "/")
 			for _, part := range parts {
-				if part == colour {
-					found = true
-					break
+				if strings.TrimSpace(part) == target {
+					return true
 				}
 			}
-			if found {
-				break
-			}
 		}
-		if !found {
-			return false
-		}
+		return false
 	}
-	
 
 	return true
 }
