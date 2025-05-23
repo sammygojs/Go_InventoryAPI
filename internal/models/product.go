@@ -49,11 +49,12 @@ type Variant struct {
 	ID    int    `json:"id"`
 	EAN   string `json:"ean"`
 	SKU   string `json:"sku"`
-	Prices struct {
-		Price           float64     `json:"price"`
-		MembershipPrice interface{} `json:"membershipPrice"`
-		CurrencyCode    string      `json:"currencyCode"`
-	} `json:"prices"`
+	// Prices struct {
+	// 	Price           float64     `json:"price"`
+	// 	MembershipPrice interface{} `json:"membershipPrice",omitempty`
+	// 	CurrencyCode    string      `json:"currencyCode"`
+	// } `json:"prices"`
+	Prices PriceInfo `json:"prices"`
 	Inventory struct {
 		Count     interface{} `json:"count"`
 		IsInStock bool        `json:"isInStock"`
@@ -85,6 +86,12 @@ type Option struct {
 	InStock bool   `json:"inStock"`
 	Size    string `json:"size"`
 	Colour  string `json:"colour"`
+}
+
+type PriceInfo struct {
+    Price           float64     `json:"price"`
+    MembershipPrice interface{} `json:"membershipPrice,omitempty"`
+    CurrencyCode    string      `json:"currencyCode"`
 }
 
 type ImageList []*Image

@@ -13,7 +13,7 @@ import (
 	"ProductsAPI/internal/services"
 )
 
-// Replaces cache every time for simplicity (you could optimize later)
+// Replaces cache every time for simplicity
 var cachedProducts *models.Products
 
 // Helper to manually set cache if needed
@@ -47,18 +47,11 @@ func GetProducts(c *gin.Context) {
 		maxPrice = 999999
 	}
 
-	// log.Printf("[INFO] Getting products (page: %d, limit: %d, minPrice: %.2f, maxPrice: %.2f, inStock: %v, colour: %s)",
-	// 	page, limit, minPrice, maxPrice, inStock, colourFilter)
-
 	// Always pull fresh data from DynamoDB 
 	// productsData is of Products Struct
 	productsData, err := db.LoadProductsFromDynamo()
-	// log.Println("[DEBUG] productsData: ",productsData)
 
-	// serializes your Go struct into a JSON string.
-	// data, _ := json.MarshalIndent(productsData, "", "  ")
 	// log.Println("[DEBUG] Full Products JSON:\n", string(data))
-
 	if err != nil {
 		log.Printf("[ERROR] Failed to load products: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Problem loading products"})
@@ -76,19 +69,18 @@ func GetProducts(c *gin.Context) {
 		locale = locale[:5]
 	}
 	isMember := c.GetHeader("X-Member") == "true"
-	// log.Printf("[DEBUG] Locale: %s | Member: %v", locale, isMember)
 
-	// Start filtering and transforming products
+	// Creating dynamic slice to append filtered data
 	filtered := make([]*models.Product, 0, len(cachedProducts.Products))
-	// log.Println("[DEBUG] filtered:\n", string(filtered))
-	// log.Println("[DEBUG] filtered: ",filtered)
+
 	for _, p := range cachedProducts.Products {
 		// Deep clone to avoid mutating original
 		var clone models.Product
 
+		//deep copy from p to clone
+		//Converts the Product struct p to a JSON-encoded byte slice.
 		data, _ := json.Marshal(p)
-		// log.Println("data: ",data)
-		//returns an error which is ignored
+		//Takes the JSON byte slice (data) and decodes it back into a new Go struct: clone.
 		_ = json.Unmarshal(data, &clone)
 
 		// Apply translations and member pricing
@@ -101,10 +93,9 @@ func GetProducts(c *gin.Context) {
 		if !services.ProductMatchesFilters(&clone, minPrice, maxPrice, inStock, colourFilter) {
 			continue
 		}
+		//adding filtered product into filtered slice
 		filtered = append(filtered, &clone)
 	}
-
-	// log.Printf("[INFO] %d products matched filters", len(filtered))
 
 	// Sort them by ID so pagination works predictably
 	sort.Slice(filtered, func(i, j int) bool {
@@ -128,8 +119,6 @@ func GetProducts(c *gin.Context) {
 	if !hasMore {
 		nextPage = 0
 	}
-
-	// log.Printf("[INFO] Sending page %d (%d items). More: %v", page, len(pageSlice), hasMore)
 
 	// Return the response
 	c.JSON(http.StatusOK, gin.H{
@@ -174,8 +163,6 @@ func GetProduct(c *gin.Context) {
 		locale = locale[:5]
 	}
 	isMember := c.GetHeader("X-Member") == "true"
-
-	log.Printf("[DEBUG] Locale for single product: %s | Member: %v", locale, isMember)
 
 	// Clone to modify freely
 	var clone models.Product

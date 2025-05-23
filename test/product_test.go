@@ -57,11 +57,11 @@ func mockProducts() *models.Products {
 					{
 						ID: 1,
 						SKU: "MOCK123",
-						Prices: struct {
-							Price           float64     `json:"price"`
-							MembershipPrice interface{} `json:"membershipPrice"`
-							CurrencyCode    string      `json:"currencyCode"`
-						}{Price: 119.99, MembershipPrice: 99.99, CurrencyCode: "GBP"},
+						Prices: models.PriceInfo{
+							Price:           119.99,
+							MembershipPrice: 99.99,
+							CurrencyCode:    "GBP",
+						},
 						Inventory: struct {
 							Count     interface{} `json:"count"`
 							IsInStock bool        `json:"isInStock"`

@@ -7,10 +7,6 @@ import (
 )
 
 func ApplyMembershipPricing(p *models.Product, isMember bool) {
-	if !isMember {
-		return
-	}
-
 	for _, v := range p.Variants {
 		var mPriceFloat float64
 
@@ -25,12 +21,15 @@ func ApplyMembershipPricing(p *models.Product, isMember bool) {
 			if parsed, err := val.Float64(); err == nil {
 				mPriceFloat = parsed
 			}
-		default:
-			continue
 		}
 
-		if mPriceFloat > 0 && mPriceFloat < v.Prices.Price {
-			v.Prices.Price = mPriceFloat
+		if isMember {
+			// Apply membership price if it's valid
+			if mPriceFloat > 0 && mPriceFloat < v.Prices.Price {
+				v.Prices.Price = mPriceFloat
+			}
+			// Remove membershipPrice field for response
+			v.Prices.MembershipPrice = nil
 		}
 	}
 }

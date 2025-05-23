@@ -10,11 +10,11 @@ func TestProductMatchesFilters(t *testing.T) {
 	product := &models.Product{
 		Variants: []*models.Variant{
 			{
-				Prices: struct {
-					Price           float64     `json:"price"`
-					MembershipPrice interface{} `json:"membershipPrice"`
-					CurrencyCode    string      `json:"currencyCode"`
-				}{Price: 100.0},
+				Prices: models.PriceInfo{
+					Price: 119.99,
+					MembershipPrice: 99.99,
+					CurrencyCode: "GBP",
+				},
 				Inventory: struct {
 					Count     interface{} `json:"count"`
 					IsInStock bool        `json:"isInStock"`
@@ -33,8 +33,8 @@ func TestProductMatchesFilters(t *testing.T) {
 		colour   string
 		want     bool
 	}{
-		{90, 110, true, "red", true},
-		{101, 200, true, "red", false},
+		{90, 110, true, "red", false},
+		{101, 200, true, "red", true},
 		{90, 110, true, "blue", false},
 	}
 

@@ -34,13 +34,10 @@ func LoadProductsFromDynamo() (*models.Products, error) {
 
 	// I expect DynamoDB to return many products, and I want each of them stored as a pointer in this list.
 	var productList []*models.Product
-	// Take this messy JSON-ish DynamoDB output and decode it into []*models.Product
+	// Take these DynamoDB maps output and decode it into []*models.Product
 	if err := attributevalue.UnmarshalListOfMaps(out.Items, &productList); err != nil {
 		return nil, fmt.Errorf("Failed to unmarshal products: %w", err)
 	}
-
-	// jsonData, _ := json.MarshalIndent(productList, "", "  ")
-	// log.Println("[DEBUG] Full Product List:\n", string(jsonData))
 
 	return &models.Products{
 		Count:    len(productList),
@@ -94,13 +91,13 @@ func mockProducts() *models.Products {
 				},
 				Variants: []*models.Variant{
 					{
-						ID: 1,
+						ID:  1,
 						SKU: "MOCK123",
-						Prices: struct {
-							Price           float64     `json:"price"`
-							MembershipPrice interface{} `json:"membershipPrice"`
-							CurrencyCode    string      `json:"currencyCode"`
-						}{Price: 119.99, MembershipPrice: 99.99, CurrencyCode: "GBP"},
+						Prices: models.PriceInfo{
+							Price:           119.99,
+							MembershipPrice: 99.99,
+							CurrencyCode:    "GBP",
+						},
 						Inventory: struct {
 							Count     interface{} `json:"count"`
 							IsInStock bool        `json:"isInStock"`
